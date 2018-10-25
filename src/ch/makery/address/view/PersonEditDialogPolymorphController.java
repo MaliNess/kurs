@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import ch.makery.address.model.Person;
+import ch.makery.address.model.convertedFigure;
 
 /**
  * Dialog to edit details of a person.
@@ -70,7 +70,7 @@ public class PersonEditDialogPolymorphController {
     private TextField circleRadius1;
         
     private Stage dialogStage;
-    private Person person;
+    private convertedFigure person;
     private boolean okClicked = false;
 
     /**
@@ -98,7 +98,7 @@ public class PersonEditDialogPolymorphController {
      * 
      * @param person
      */
-    public void setPerson(Person person) {
+    public void setPerson(convertedFigure person) {
         this.person = person;
 
         nameField.setText(person.getName());

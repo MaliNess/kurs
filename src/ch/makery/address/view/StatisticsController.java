@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.XYChart;
-import ch.makery.address.model.Person;
+import ch.makery.address.model.convertedFigure;
 
 /**
  * The controller for the birthday statistics view.
@@ -44,10 +44,10 @@ public class StatisticsController {
      * 
      * @param persons
      */
-    public void setPersonData(List<Person> persons) {
+    public void setPersonData(List<convertedFigure> persons) {
         // Count the number of people having their birthday in a specific month.
         int[] typeCounter = new int[3];
-        for (Person p : persons) {
+        for (convertedFigure p : persons) {
             String typeName = p.getType();
             int type = 0;
             for (int i = 0; i < typeNames.size(); i++) {

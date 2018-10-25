@@ -16,7 +16,7 @@ import javafx.beans.property.SimpleIntegerProperty;
  *
  * @author Marco Jakob
  */
-public class Person {
+public class convertedFigure {
 
     private final StringProperty name;
     private final DoubleProperty area;
@@ -30,7 +30,7 @@ public class Person {
     /**
      * Default constructor.
      */
-    public Person() {
+    public convertedFigure() {
         this(null);
     }
 
@@ -39,7 +39,7 @@ public class Person {
      * 
      * @param name
      */
-    public Person(String name) {
+    public convertedFigure(String name) {
         this.name = new SimpleStringProperty(name);
 
         // Some initial dummy data, just for convenient testing.

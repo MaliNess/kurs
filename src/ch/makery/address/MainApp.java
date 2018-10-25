@@ -21,7 +21,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import ch.makery.address.model.Person;
+import ch.makery.address.model.convertedFigure;
 import ch.makery.address.model.PersonListWrapper;
 import ch.makery.address.view.StatisticsController;
 import ch.makery.address.view.PersonEditDialogPolymorphController;
@@ -36,7 +36,7 @@ public class MainApp extends Application {
     /**
      * The data as an observable list of Persons.
      */
-    private ObservableList<Person> personData = FXCollections.observableArrayList();
+    private ObservableList<convertedFigure> personData = FXCollections.observableArrayList();
 
     /**
      * Constructor
@@ -50,7 +50,7 @@ public class MainApp extends Application {
      * Returns the data as an observable list of Persons. 
      * @return
      */
-    public ObservableList<Person> getPersonData() {
+    public ObservableList<convertedFigure> getPersonData() {
         return personData;
     }
 
@@ -129,7 +129,7 @@ public class MainApp extends Application {
      * @param person the person object to be edited
      * @return true if the user clicked OK, false otherwise.
      */
-    public boolean showPersonEditDialog(Person person) {
+    public boolean showPersonEditDialog(convertedFigure person) {
         try {
             // Load the fxml file and create a new stage for the popup dialog.
             FXMLLoader loader = new FXMLLoader();

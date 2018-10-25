@@ -7,13 +7,13 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ch.makery.address.MainApp;
-import ch.makery.address.model.Person;
+import ch.makery.address.model.convertedFigure;
 
 public class PersonOverviewController {
     @FXML
-    private TableView<Person> personTable;
+    private TableView<convertedFigure> personTable;
     @FXML
-    private TableColumn<Person, String> nameColumn;
+    private TableColumn<convertedFigure, String> nameColumn;
 
     @FXML
     private Label nameLabel;
@@ -71,7 +71,7 @@ public class PersonOverviewController {
      * 
      * @param person the person or null
      */
-    private void showPersonDetails(Person person) {
+    private void showPersonDetails(convertedFigure person) {
         if (person != null) {
             // Fill the labels with info from the person object.
             nameLabel.setText(person.getName());
@@ -115,7 +115,7 @@ public class PersonOverviewController {
      */
     @FXML
     private void handleNewPerson() {
-        Person tempPerson = new Person();
+        convertedFigure tempPerson = new convertedFigure();
         boolean okClicked = mainApp.showPersonEditDialog(tempPerson);
         if (okClicked) {
             mainApp.getPersonData().add(tempPerson);
@@ -128,7 +128,7 @@ public class PersonOverviewController {
      */
     @FXML
     private void handleEditPerson() {
-        Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
+        convertedFigure selectedPerson = personTable.getSelectionModel().getSelectedItem();
         if (selectedPerson != null) {
             boolean okClicked = mainApp.showPersonEditDialog(selectedPerson);
             if (okClicked) {

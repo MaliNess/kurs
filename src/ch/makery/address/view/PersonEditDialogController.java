@@ -6,7 +6,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import ch.makery.address.model.Person;
+import ch.makery.address.model.convertedFigure;
 
 /**
  * Dialog to edit details of a person.
@@ -27,7 +27,7 @@ public class PersonEditDialogController {
     private TextField typeField;    
 
     private Stage dialogStage;
-    private Person person;
+    private convertedFigure person;
     private boolean okClicked = false;
 
     /**
@@ -55,7 +55,7 @@ public class PersonEditDialogController {
      * 
      * @param person
      */
-    public void setPerson(Person person) {
+    public void setPerson(convertedFigure person) {
         this.person = person;
 
         nameField.setText(person.getName());
